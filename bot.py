@@ -1,3 +1,4 @@
+import os
 import logging
 import random
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
@@ -278,7 +279,7 @@ async def stop(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ===================== MAIN =====================
 def main():
     # O'z TOKEN'ingizni shu yerga qo'ying
-    TOKEN = "8615969282:AAE_CzyQ5GdwPzmWfomoxv15GRw005a31SM"
+    TOKEN = os.environ.get("BOT_TOKEN")
 
     app = Application.builder().token(TOKEN).build()
 
