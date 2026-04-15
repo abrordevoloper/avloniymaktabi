@@ -216,7 +216,11 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
             return
 
-        selected = random.sample(pool, min(10, len(pool)))
+        #selected = random.sample(pool, min(10, len(pool)))
+        MAX_QUESTIONS = 50
+        selected = pool[:]
+        random.shuffle(selected)
+        selected = selected[:MAX_QUESTIONS]
         context.user_data["questions"] = selected
         context.user_data["current"] = 0
         context.user_data["score"] = 0
