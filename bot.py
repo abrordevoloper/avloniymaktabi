@@ -695,7 +695,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # MAIN
 # =====================================================
 def main():
-    TOKEN = os.environ.get("BOT_TOKEN")
+    TOKEN = "8615969282:AAE_CzyQ5GdwPzmWfomoxv15GRw005a31SM"
     if not TOKEN:
         raise ValueError("BOT_TOKEN environment variable not set!")
 
