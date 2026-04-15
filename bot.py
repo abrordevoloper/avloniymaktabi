@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 # =====================================================
 # ADMIN ID — @userinfobot ga /start yuboring, ID oling
 # =====================================================
-ADMIN_IDS = [123456789]  # <- O'z ID'ingizni yozing
+ADMIN_IDS = [1986282464]  # <- O'z ID'ingizni yozing
 
 DB_PATH = "questions.db"
 
