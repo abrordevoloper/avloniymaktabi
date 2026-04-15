@@ -215,9 +215,10 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 parse_mode="Markdown"
             )
             return
-        
-		selected = random.sample(pool, min(10, len(pool)))
-	    context.user_data["questions"] = selected
+
+        selected = pool[:]
+	    random.shuffle(selected)
+        context.user_data["questions"] = selected
         context.user_data["current"] = 0
         context.user_data["score"] = 0
         context.user_data["wrong"] = []
