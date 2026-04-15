@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 # =====================================================
 # ADMIN ID — @userinfobot ga /start yuboring, ID oling
 # =====================================================
-ADMIN_IDS = [1986282464]  # <- O'z ID'ingizni yozing
+ADMIN_IDS = [123456789]  # <- O'z ID'ingizni yozing
 
 DB_PATH = "questions.db"
 
@@ -216,7 +216,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             )
             return
 
-        selected = random.sample(pool, min(10, len(pool)))
+        selected = pool[:]
+	    random.shuffle(selected)
         context.user_data["questions"] = selected
         context.user_data["current"] = 0
         context.user_data["score"] = 0
